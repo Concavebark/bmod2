@@ -1,7 +1,7 @@
 {
-  "itemGroups.bModSmokeable" : "BMod Smoking",
-  "itemGroups.bModEdible"    : "BMod Edibles",
-  "itemGroups.bModPlantable" : "BMod Growing",
+  "itemGroup.bModSmokeable" : "BMod Smoking",
+  "itemGroup.bModEdible"    : "BMod Edibles",
+  "itemGroup.bModPlantable" : "BMod Growing",
   "block.bmod2.oats_crop"    : "Oats",
   "block.bmod2.bongoblonko"  : "Bongo Blonko",
 
@@ -25,5 +25,19 @@
   "item.bmod2.richops"       : "Raw Infused Porkchop",
   "item.bmod2.ichops"        : "Cooked Infused Porkchop",
   "item.bmod2.ritato"        : "Raw Infused Potato",
-  "item.bmod2.itato"         : "Baked Infused Potato"
+  "item.bmod2.itato"         : "Baked Infused Potato",
+
+  "item.bmod2.regseeds"      : "Reggie Seeds",
+  "item.bmod2.perpseeds"     : "Perp Seeds",
+  "item.bmod2.presseeds"     : "Presidential Seeds",
+  "item.bmod2.olseeds"       : "Oompa Loompa Seeds",
+  "item.bmod2.pkseeds"       : "Purple Kush Seeds",
+  "item.bmod2.sdseeds"       : "Sour Diesel Seeds",
+
+  "item.bmod2.regweed"      : "Reggie Weed",
+  "item.bmod2.perpweed"     : "Perp Weed",
+  "item.bmod2.presweed"     : "Presidential Weed",
+  "item.bmod2.olweed"       : "Oompa Loompa Weed",
+  "item.bmod2.pkweed"       : "Purple Kush Weed",
+  "item.bmod2.sdweed"       : "Sour Diesel Weed"
 }
