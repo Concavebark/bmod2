@@ -5,17 +5,20 @@ import me.concavebark.bmod.bmod;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
 
 public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, bmod.MOD_ID);
 
     // Seeds
-    // TODO: Localize and make model files
     public static final RegistryObject<Item> REG_SEED = ITEMS.register("regseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     public static final RegistryObject<Item> PERP_SEED = ITEMS.register("perpseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     public static final RegistryObject<Item> PRES_SEED = ITEMS.register("presseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
@@ -24,7 +27,6 @@ public class ModItems {
     public static final RegistryObject<Item> SD_SEED = ITEMS.register("sdseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
 
     // Strains
-    // TODO: Localize and make model files
     public static final RegistryObject<Item> REG_WEED = ITEMS.register("regweed", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     public static final RegistryObject<Item> PERP_WEED = ITEMS.register("perpweed", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     public static final RegistryObject<Item> PRES_WEED = ITEMS.register("presweed", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
@@ -34,12 +36,64 @@ public class ModItems {
 
     // Blunts
     public static final RegistryObject<Item> ROLLING_PAPERS = ITEMS.register("rpapers", () -> new Item(new Item.Properties().tab(ModItemGroup.SMOKEABLE)));
-    public static final RegistryObject<Item> REG_BLUNT = ITEMS.register("blunt", () -> new Item(new Item.Properties().tab(ModItemGroup.SMOKEABLE)));
-    public static final RegistryObject<Item> OOMPA_LOOMPA_BLUNT = ITEMS.register("olblunt", () -> new Item(new Item.Properties().tab(ModItemGroup.SMOKEABLE)));
-    public static final RegistryObject<Item> PERP_BLUNT = ITEMS.register("perpblunt", () -> new Item(new Item.Properties().tab(ModItemGroup.SMOKEABLE)));
-    public static final RegistryObject<Item> PRES_BLUNT = ITEMS.register("presblunt", () -> new Item(new Item.Properties().tab(ModItemGroup.SMOKEABLE)));
-    public static final RegistryObject<Item> PK_BLUNT = ITEMS.register("pkblunt", () -> new Item(new Item.Properties().tab(ModItemGroup.SMOKEABLE)));
-    public static final RegistryObject<Item> SD_BLUNT = ITEMS.register("sdblunt", () -> new Item(new Item.Properties().tab(ModItemGroup.SMOKEABLE)));
+    public static final RegistryObject<Item> REG_BLUNT = ITEMS.register("blunt", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.SMOKEABLE)
+            .food(new Food.Builder()
+                    .alwaysEat()
+                    .nutrition(0)
+                    .saturationMod(0)
+                    .effect(new EffectInstance(Effects.CONFUSION, 300, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 300, 2), 0.5f)
+                    .build())));
+    public static final RegistryObject<Item> OOMPA_LOOMPA_BLUNT = ITEMS.register("olblunt", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.SMOKEABLE)
+            .food(new Food.Builder()
+                    .alwaysEat()
+                    .nutrition(0)
+                    .saturationMod(0)
+                    .effect(new EffectInstance(Effects.CONFUSION, 1125, 2), 0.33f)
+                    .effect(new EffectInstance(Effects.HUNGER, 1125, 2), 0.33f)
+                    .effect(new EffectInstance(Effects.DIG_SLOWDOWN, 1124, 2), 0.33f)
+                    .effect(new EffectInstance(Effects.FIRE_RESISTANCE, 1124, 2), 0.33f)
+                    .build())));
+    public static final RegistryObject<Item> PERP_BLUNT = ITEMS.register("perpblunt", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.SMOKEABLE)
+            .food(new Food.Builder()
+                    .alwaysEat()
+                    .nutrition(0)
+                    .saturationMod(0)
+                    .effect(new EffectInstance(Effects.CONFUSION, 700, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 700, 2), 0.5f)
+                    .build())));
+    public static final RegistryObject<Item> PRES_BLUNT = ITEMS.register("presblunt", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.SMOKEABLE)
+            .food(new Food.Builder()
+                    .alwaysEat()
+                    .nutrition(0)
+                    .saturationMod(0)
+                    .effect(new EffectInstance(Effects.CONFUSION, 1200, 4), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 1200, 2), 0.5f)
+                    .build())));
+    public static final RegistryObject<Item> PK_BLUNT = ITEMS.register("pkblunt", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.SMOKEABLE)
+            .food(new Food.Builder()
+                    .alwaysEat()
+                    .nutrition(0)
+                    .saturationMod(0)
+                    .effect(new EffectInstance(Effects.CONFUSION, 1125, 9), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 1125, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 1125, 2), 1f)
+                    .build())));
+    public static final RegistryObject<Item> SD_BLUNT = ITEMS.register("sdblunt", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.SMOKEABLE)
+            .food(new Food.Builder()
+                    .alwaysEat()
+                    .nutrition(0)
+                    .saturationMod(0)
+                    .effect(new EffectInstance(Effects.CONFUSION, 1125, 10), 1f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 1125, 2), 1)
+                    .effect(new EffectInstance(Effects.DIG_SLOWDOWN, 1125, 2), 1f)
+                    .build())));
 
     // Edibles
     public static final RegistryObject<Item> EDIBLE_COOKIE = ITEMS.register("ecookie", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
