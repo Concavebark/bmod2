@@ -1,8 +1,12 @@
 package me.concavebark.bmod;
 
+import me.concavebark.bmod.block.ModBlocks;
 import me.concavebark.bmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -32,6 +36,17 @@ public class bmod
 
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
+
+        eventBus.addListener(this::doClientStuff);
+
+        MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void doClientStuff(final FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            RenderTypeLookup.setRenderLayer(ModBlocks.OATS.get(), RenderType.cutout()); // might be something else original code is "RenderType.getCutout()"
+        });
     }
 
     private void setup(final FMLCommonSetupEvent event)
