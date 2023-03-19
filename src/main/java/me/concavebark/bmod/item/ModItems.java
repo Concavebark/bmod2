@@ -1,6 +1,9 @@
 package me.concavebark.bmod.item;
 
+import me.concavebark.bmod.block.ModBlocks;
 import me.concavebark.bmod.bmod;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -52,6 +55,13 @@ public class ModItems {
     public static final RegistryObject<Item> I_CHOPS = ITEMS.register("ichops", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD)));
     public static final RegistryObject<Item> R_I_TATO = ITEMS.register("ritato", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD)));
     public static final RegistryObject<Item> I_TATO = ITEMS.register("itato", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD)));
+
+    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
+            () -> new BlockItem(ModBlocks.OATS.get(),
+                    new Item.Properties().food(
+                                    new Food.Builder().nutrition(1).saturationMod(0.1f).fast().build())
+                            .tab(ModItemGroup.BMOD_GROUP)));
+
 
     public static void register(IEventBus eventBus){
 

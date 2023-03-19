@@ -1,4 +1,8 @@
 {
+  "itemGroups.bmodTab"   : "B Mod",
+  "block.bmod2.oats_crop": "Oats",
+  "block.bmod2.bongoblonko": "Bongo Blonko",
+
   "item.bmod2.rpapers"   : "Rolling Papers",
 
   "item.bmod2.blunt"     : "Blunt",

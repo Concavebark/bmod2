@@ -2,6 +2,7 @@ package me.concavebark.bmod.item;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 
 public class ModItemGroup {
 
