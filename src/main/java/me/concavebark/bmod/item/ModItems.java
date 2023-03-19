@@ -60,7 +60,7 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.OATS.get(),
                     new Item.Properties().food(
                                     new Food.Builder().nutrition(1).saturationMod(0.1f).fast().build())
-                            .tab(ModItemGroup.BMOD_GROUP)));
+                            .tab(ModItemGroup.EDIBLE)));
 
 
     public static void register(IEventBus eventBus){

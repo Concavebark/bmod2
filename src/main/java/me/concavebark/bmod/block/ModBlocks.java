@@ -32,7 +32,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroup.BMOD_GROUP)));
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     }
 
     public static final RegistryObject<Block> bongobonko = registerBlock("bongoblonko",
