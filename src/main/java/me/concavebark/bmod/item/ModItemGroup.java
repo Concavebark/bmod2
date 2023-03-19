@@ -9,7 +9,7 @@ public class ModItemGroup {
     public static final ItemGroup BMOD_GROUP = new ItemGroup("bModTab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.BLUNT.get());
+            return new ItemStack(ModItems.REG_BLUNT.get());
         }
     };
 }
