@@ -1,3 +1,23 @@
 {
-  "item.bmod2.blunt" : "Blunt"
+  "item.bmod2.rpapers"   : "Rolling Papers",
+
+  "item.bmod2.blunt"     : "Blunt",
+  "item.bmod2.olblunt"   : "Oompa Loompa Blunt",
+  "item.bmod2.perpblunt" : "Perp Blunt",
+  "item.bmod2.presblunt" : "Presidential Blunt",
+  "item.bmod2.pkblunt"   : "Purple Kush Blunt",
+  "item.bmod2.sdblunt"   : "Sour Diesel Blunt",
+
+  "item.bmod2.ecookie"   : "Infused Cookie",
+  "item.bmod2.butter"    : "Butter",
+  "item.bmod2.ibutter"   : "Infused Butter",
+  "item.bmod2.dough"     : "Dough",
+  "item.bmod2.rnugs"     : "Raw Chicken Nuggets",
+  "item.bmod2.nugs"      : "Cooked Chicken Nuggets",
+  "item.bmod2.rinugs"    : "Raw Infused Chicken Nuggets",
+  "item.bmod2.inugs"     : "Cooked Infused Chicken Nuggets",
+  "item.bmod2.richops"   : "Raw Infused Porkchop",
+  "item.bmod2.ichops"    : "Cooked Infused Porkchop",
+  "item.bmod2.ritato"    : "Raw Infused Potato",
+  "item.bmod2.itato"     : "Baked Infused Potato"
 }
