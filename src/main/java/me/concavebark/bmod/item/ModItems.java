@@ -87,25 +87,78 @@ public class ModItems {
             .food(new Food.Builder()
                     .alwaysEat()
                     .nutrition(0)
-                    .saturationMod(0)
+                    .saturationMod(0f)
                     .effect(new EffectInstance(Effects.CONFUSION, 1125, 10), 1f)
-                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 1125, 2), 1)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 1125, 2), 1f)
                     .effect(new EffectInstance(Effects.DIG_SLOWDOWN, 1125, 2), 1f)
                     .build())));
 
     // Edibles
-    public static final RegistryObject<Item> EDIBLE_COOKIE = ITEMS.register("ecookie", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> DOUGH = ITEMS.register("dough", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> I_BUTTER = ITEMS.register("ibutter", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> R_NUGS = ITEMS.register("rnugs", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> NUGS = ITEMS.register("nugs", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> R_I_NUGS = ITEMS.register("rinugs", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> I_NUGS = ITEMS.register("inugs", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> R_I_CHOPS = ITEMS.register("richops", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> I_CHOPS = ITEMS.register("ichops", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> R_I_TATO = ITEMS.register("ritato", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> I_TATO = ITEMS.register("itato", () -> new Item(new Item.Properties().tab(ModItemGroup.EDIBLE)));
+    public static final RegistryObject<Item> EDIBLE_COOKIE = ITEMS.register("ecookie", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(2)
+                    .saturationMod(0.4f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 6000, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 6000, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 6000, 2), 0.75f)
+                    .effect(new EffectInstance(Effects.DIG_SLOWDOWN, 6000, 2), 0.75f)
+                    .build())));
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(5)
+                    .saturationMod(0.4f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 40, 11), 1f)
+                    .effect(new EffectInstance(Effects.POISON, 40, 1), 0.7f)
+                    .build())));
+    public static final RegistryObject<Item> DOUGH = ITEMS.register("dough", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(4)
+                    .saturationMod(0.4f)
+                    .build())));
+    public static final RegistryObject<Item> I_BUTTER = ITEMS.register("ibutter", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(5)
+                    .saturationMod(0.4f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 3000, 11), 1f)
+                    .effect(new EffectInstance(Effects.POISON, 40, 1), 0.7f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 3000, 2), 0.75f)
+                    .build())));
+    public static final RegistryObject<Item> R_NUGS = ITEMS.register("rnugs", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(1)
+                    .saturationMod(1f)
+                    .effect(new EffectInstance(Effects.POISON, 600, 1), 0.3f)
+                    .build())));
+    public static final RegistryObject<Item> NUGS = ITEMS.register("nugs", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(6)
+                    .saturationMod(7.2f)
+                    .build())));
+    public static final RegistryObject<Item> R_I_NUGS = ITEMS.register("rinugs", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(1)
+                    .saturationMod(1f)
+                    .effect(new EffectInstance(Effects.POISON, 600, 1), 0.3f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
+    public static final RegistryObject<Item> I_NUGS = ITEMS.register("inugs", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(6)
+                    .saturationMod(7.2f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
 
     public static final RegistryObject<Item> OATS = ITEMS.register("oats",
             () -> new BlockItem(ModBlocks.OATS.get(),
