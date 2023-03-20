@@ -35,5 +35,7 @@
   "item.bmod2.presweed"     : "Presidential Weed",
   "item.bmod2.olweed"       : "Oompa Loompa Weed",
   "item.bmod2.pkweed"       : "Purple Kush Weed",
-  "item.bmod2.sdweed"       : "Sour Diesel Weed"
+  "item.bmod2.sdweed"       : "Sour Diesel Weed",
+
+  "block.bmod2.weed_crop"   : "Reggie Seeds"
 }

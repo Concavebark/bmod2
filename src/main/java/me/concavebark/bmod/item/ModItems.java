@@ -17,7 +17,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, bmod.MOD_ID);
 
     // Seeds
-    public static final RegistryObject<Item> REG_SEED = ITEMS.register("regseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> REG_SEED = ITEMS.register("regseeds",
+            () -> new BlockItem(ModBlocks.WEED.get(),
+                    new Item.Properties().tab(ModItemGroup.EDIBLE)));
     public static final RegistryObject<Item> PERP_SEED = ITEMS.register("perpseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     public static final RegistryObject<Item> PRES_SEED = ITEMS.register("presseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     public static final RegistryObject<Item> OL_SEED = ITEMS.register("olseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
