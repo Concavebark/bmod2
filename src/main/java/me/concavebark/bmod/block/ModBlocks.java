@@ -1,14 +1,12 @@
 package me.concavebark.bmod.block;
 
-import me.concavebark.bmod.block.custom.OatsBlock;
-import me.concavebark.bmod.block.custom.WeedCrop;
+import me.concavebark.bmod.block.custom.*;
 import me.concavebark.bmod.bmod;
 import me.concavebark.bmod.item.ModItemGroup;
 import me.concavebark.bmod.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -46,4 +44,20 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WEED = BLOCKS.register("weed_crop",
             () -> new WeedCrop(AbstractBlock.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> OLCROP = BLOCKS.register("ol_crop",
+            () -> new OompaLoompaCrop(AbstractBlock.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> PERPCROP = BLOCKS.register("perp_crop",
+            () -> new PerpCrop(AbstractBlock.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> PRESCROP = BLOCKS.register("pres_crop",
+            () -> new PresCrop(AbstractBlock.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> PKCROP = BLOCKS.register("pk_crop",
+            () -> new PkCrop(AbstractBlock.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> SDCROP = BLOCKS.register("sd_crop",
+            () -> new SdCrop(AbstractBlock.Properties.copy(Blocks.WHEAT)));
+
 }

@@ -17,17 +17,19 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
 
-public class WeedCrop extends CropsBlock {
+public class SdCrop extends CropsBlock {
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 3);
+
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D)
+Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
+Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
+Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D)
+
     };
 
 
-    public WeedCrop(Properties properties) {
+    public SdCrop(Properties properties) {
         super(properties);
     }
     public IntegerProperty getAgeProperty() {
@@ -39,7 +41,7 @@ public class WeedCrop extends CropsBlock {
     }
     @Override
     protected IItemProvider getBaseSeedId() {
-        return ModItems.REG_SEED.get();
+        return ModItems.SD_SEED.get();
     }
 
     public void randomTick(BlockState p_225542_1_, ServerWorld p_225542_2_, BlockPos p_225542_3_, Random p_225542_4_) {

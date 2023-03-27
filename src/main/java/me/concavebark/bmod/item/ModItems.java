@@ -19,12 +19,22 @@ public class ModItems {
     // Seeds
     public static final RegistryObject<Item> REG_SEED = ITEMS.register("regseeds",
             () -> new BlockItem(ModBlocks.WEED.get(),
-                    new Item.Properties().tab(ModItemGroup.EDIBLE)));
-    public static final RegistryObject<Item> PERP_SEED = ITEMS.register("perpseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> PRES_SEED = ITEMS.register("presseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> OL_SEED = ITEMS.register("olseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> PK_SEED = ITEMS.register("pkseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> SD_SEED = ITEMS.register("sdseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> PERP_SEED = ITEMS.register("perpseeds",
+            () -> new BlockItem(ModBlocks.PERPCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> PRES_SEED = ITEMS.register("presseeds",
+            () -> new BlockItem(ModBlocks.PRESCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> OL_SEED = ITEMS.register("olseeds",
+            () -> new BlockItem(ModBlocks.OLCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> PK_SEED = ITEMS.register("pkseeds",
+            () -> new BlockItem(ModBlocks.PKCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> SD_SEED = ITEMS.register("sdseeds",
+            () -> new BlockItem(ModBlocks.SDCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
 
     // Strains
     public static final RegistryObject<Item> REG_WEED = ITEMS.register("regweed", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
