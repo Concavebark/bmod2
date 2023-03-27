@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "bmod2:butter",
+    "count": 4
+  }
+}

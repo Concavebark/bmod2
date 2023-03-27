@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bmod2:ripotato"
+  },
+  "result": "bmod2:ipotato",
+  "experience": 0.2,
+  "cookingtime": 200
+}

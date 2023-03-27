@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#XX"
+  ],
+  "key": {
+    "X": {
+      "item": "bmod2:presweed"
+    },
+    "#": {
+      "item": "bmod2:rpapers"
+    }
+  },
+  "result": {
+    "item": "bmod2:presblunt"
+  }
+}

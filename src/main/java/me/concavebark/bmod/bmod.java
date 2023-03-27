@@ -45,7 +45,6 @@ public class bmod
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            RenderTypeLookup.setRenderLayer(ModBlocks.OATS.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.WEED.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.OLCROP.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.PERPCROP.get(), RenderType.cutout());

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:pumpkin_seeds"
+    },
+    "#": {
+      "item": "bmod2:perpseeds"
+    }
+  },
+  "result": {
+    "item": "bmod2:olseeds"
+  }
+}

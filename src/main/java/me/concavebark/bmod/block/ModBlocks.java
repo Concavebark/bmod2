@@ -35,13 +35,6 @@ public class ModBlocks {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroup.PLANTABLE)));
     }
 
-    public static final RegistryObject<Block> bongobonko = registerBlock("bongoblonko",
-            () -> new Block(AbstractBlock.Properties.of(Material.STONE).harvestLevel(2)
-                    .harvestTool(ToolType.HOE).requiresCorrectToolForDrops().strength(5f)));
-
-    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop",
-            () -> new OatsBlock(AbstractBlock.Properties.copy(Blocks.WHEAT)));
-
     public static final RegistryObject<Block> WEED = BLOCKS.register("weed_crop",
             () -> new WeedCrop(AbstractBlock.Properties.copy(Blocks.WHEAT)));
 

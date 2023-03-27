@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bmod2:dough"
+  },
+  "result": "bmod2:ecookie",
+  "experience": 0.2,
+  "cookingtime": 200,
+  "count": 3
+}

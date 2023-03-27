@@ -22,6 +22,12 @@
   "item.bmod2.nugs"          : "Cooked Chicken Nuggets",
   "item.bmod2.rinugs"        : "Raw Infused Chicken Nuggets",
   "item.bmod2.inugs"         : "Cooked Infused Chicken Nuggets",
+  "item.bmod2.rihcop"        : "Raw Infused Porkchop",
+  "item.bmod2.ichop"         : "Cooked Infused Porkchop",
+  "item.bmod2.ribeef"       : "Raw Infused Beef",
+  "item.bmod2.isteak"        : "Cooked Infused Steak",
+  "item.bmod2.ripotato"      : "Raw Infused Potato",
+  "item.bmod2.ipotato"       : "Cooked Infused Potato",
 
   "item.bmod2.regseeds"      : "Reggie Seeds",
   "item.bmod2.perpseeds"     : "Perp Seeds",

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:coal"
+    },
+    "#": {
+      "item": "bmod2:presseeds"
+    }
+  },
+  "result": {
+    "item": "bmod2:sdseeds"
+  }
+}
