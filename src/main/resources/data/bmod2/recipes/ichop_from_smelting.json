@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bmod2:richop"
+  },
+  "result": "bmod2:ichop",
+  "experience": 0.2,
+  "cookingtime": 200
+}

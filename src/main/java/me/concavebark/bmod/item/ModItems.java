@@ -17,12 +17,24 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, bmod.MOD_ID);
 
     // Seeds
-    public static final RegistryObject<Item> REG_SEED = ITEMS.register("regseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> PERP_SEED = ITEMS.register("perpseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> PRES_SEED = ITEMS.register("presseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> OL_SEED = ITEMS.register("olseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> PK_SEED = ITEMS.register("pkseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
-    public static final RegistryObject<Item> SD_SEED = ITEMS.register("sdseeds", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> REG_SEED = ITEMS.register("regseeds",
+            () -> new BlockItem(ModBlocks.WEED.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> PERP_SEED = ITEMS.register("perpseeds",
+            () -> new BlockItem(ModBlocks.PERPCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> PRES_SEED = ITEMS.register("presseeds",
+            () -> new BlockItem(ModBlocks.PRESCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> OL_SEED = ITEMS.register("olseeds",
+            () -> new BlockItem(ModBlocks.OLCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> PK_SEED = ITEMS.register("pkseeds",
+            () -> new BlockItem(ModBlocks.PKCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
+    public static final RegistryObject<Item> SD_SEED = ITEMS.register("sdseeds",
+            () -> new BlockItem(ModBlocks.SDCROP.get(),
+                    new Item.Properties().tab(ModItemGroup.PLANTABLE)));
 
     // Strains
     public static final RegistryObject<Item> REG_WEED = ITEMS.register("regweed", () -> new Item(new Item.Properties().tab(ModItemGroup.PLANTABLE)));
@@ -108,11 +120,68 @@ public class ModItems {
                     .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
                     .build())));
 
-    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
-            () -> new BlockItem(ModBlocks.OATS.get(),
-                    new Item.Properties().food(
-                                    new Food.Builder().nutrition(1).saturationMod(0.1f).fast().build())
-                            .tab(ModItemGroup.EDIBLE)));
+    public static final RegistryObject<Item> R_I_CHOP = ITEMS.register("richop", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(1)
+                    .saturationMod(1f)
+                    .effect(new EffectInstance(Effects.POISON, 600, 1), 0.3f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
+
+    public static final RegistryObject<Item> I_CHOP = ITEMS.register("ichop", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(6)
+                    .saturationMod(7.2f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
+
+    public static final RegistryObject<Item> R_I_BEEF = ITEMS.register("ribeef", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(1)
+                    .saturationMod(1f)
+                    .effect(new EffectInstance(Effects.POISON, 600, 1), 0.3f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
+
+    public static final RegistryObject<Item> I_STEAK = ITEMS.register("isteak", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(6)
+                    .saturationMod(7.2f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
+
+    public static final RegistryObject<Item> R_I_POTATO = ITEMS.register("ripotato", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(1)
+                    .saturationMod(1f)
+                    .effect(new EffectInstance(Effects.POISON, 600, 1), 0.3f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
+
+    public static final RegistryObject<Item> I_POTATO = ITEMS.register("ipotato", () -> new Item(new Item.Properties()
+            .tab(ModItemGroup.EDIBLE)
+            .food(new Food.Builder()
+                    .nutrition(6)
+                    .saturationMod(7.2f)
+                    .effect(new EffectInstance(Effects.CONFUSION, 2100, 2), 1f)
+                    .effect(new EffectInstance(Effects.HUNGER, 2100, 2), 0.5f)
+                    .effect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 2100, 2), 0.5f)
+                    .build())));
 
 
     public static void register(IEventBus eventBus){

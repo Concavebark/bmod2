@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/crop",
+    "textures": {
+        "crop": "bmod2:block/sdseeds_stage1"
+    }
+}

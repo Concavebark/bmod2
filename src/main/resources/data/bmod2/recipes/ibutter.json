@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#X"
+  ],
+  "key": {
+    "X": {
+      "item": "bmod2:butter"
+    },
+    "#": {
+      "item": "bmod2:perpweed"
+    }
+  },
+  "result": {
+    "item": "bmod2:ibutter"
+  }
+}

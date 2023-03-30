@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bmod2:ribeef"
+  },
+  "result": "bmod2:isteak",
+  "experience": 0.2,
+  "cookingtime": 200
+}

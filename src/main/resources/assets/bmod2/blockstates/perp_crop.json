@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "age=0": {
+            "model": "bmod2:block/perpseeds_stage0"
+        },
+        "age=1": {
+            "model": "bmod2:block/perpseeds_stage1"
+        },
+        "age=2": {
+            "model": "bmod2:block/perpseeds_stage2"
+        },
+        "age=3": {
+            "model": "bmod2:block/perpseeds_stage3"
+        }
+    }
+}

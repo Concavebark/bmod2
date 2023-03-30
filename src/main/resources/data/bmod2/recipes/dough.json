@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WMW",
+    "BWB"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "B": {
+      "item": "bmod2:ibutter"
+    }
+  },
+  "result": {
+    "item": "bmod2:dough"
+  }
+}

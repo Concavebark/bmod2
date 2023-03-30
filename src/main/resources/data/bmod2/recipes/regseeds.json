@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:wheat_seeds"
+    }
+  },
+  "result": {
+    "item": "bmod2:regseeds"
+  }
+}
