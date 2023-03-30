@@ -5,6 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.UseAction;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResult;
@@ -25,20 +26,8 @@ public class Blunt extends Item {
         this.strain = strain;
     }
 
-    @Override
-    public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand){
 
-        if(!world.isClientSide()){
-
-            ItemStack stack = player.getItemInHand(hand);
-
-            player.startUsingItem(hand);
-            return ActionResult.consume(stack);
-        }
-
-        return ActionResult.pass(player.getItemInHand(hand));
-    }
-
+    /*
     @Override
     public ItemStack finishUsingItem(ItemStack stack, World world, LivingEntity player){
 
@@ -81,6 +70,7 @@ public class Blunt extends Item {
 
         return player.eat(world, stack);
     }
+    */
 
     private int randomInt(int min, int max){
 
